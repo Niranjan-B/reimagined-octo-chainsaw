@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BloodApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="blood_groups">
+        <item>A+</item>
+        <item>B+</item>
+        <item>0+</item>
+        <item>O-</item>
+        <item>C+</item>
+    </string-array>
+    <string-array name="Area">
+        <item>Hebbal</item>
+        <item>Yelahanka</item>
+        <item>marathahalli</item>
+        <item>mekri Circle</item>
+        <item>Nagshettyhalli</item>
+        <item>New Bel Road</item>
+        <item>Sanjaynagar</item>
+        <item>Mathikere</item>
+    </string-array>
+</resources>
