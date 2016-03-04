@@ -12,17 +12,18 @@ import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
 import it.neokree.materialtabs.MaterialTabListener;
 
-public class SecondActivity extends AppCompatActivity implements MaterialTabListener{
+public class SecondActivity extends AppCompatActivity implements MaterialTabListener {
+
+    public static String[] str = new String[]{"Request For Blood", "Donate Blood"};
     MaterialTabHost mt;
     ViewPager pager;
-    public static String[] str= new String[]{"Request For Blood","Dontae Blood"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-         pager= (ViewPager) findViewById(R.id.pager);
-         mt= (MaterialTabHost) findViewById(R.id.materialTabHost);
+        pager = (ViewPager) findViewById(R.id.pager);
+        mt = (MaterialTabHost) findViewById(R.id.materialTabHost);
         Toolbar tb = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -36,8 +37,7 @@ public class SecondActivity extends AppCompatActivity implements MaterialTabList
         });
 
 
-
-        PagerAdapter pagerAdapter= new PagerAdapter(getSupportFragmentManager());
+        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
         pager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override

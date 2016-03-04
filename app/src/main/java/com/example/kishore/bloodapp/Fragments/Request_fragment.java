@@ -19,24 +19,21 @@ public class Request_fragment extends Fragment {
     Spinner spinner_area;
 
 
+    public Request_fragment() {
+        // Required empty public constructor
+    }
+
     public static Request_fragment newInstance() {
         Request_fragment fragment = new Request_fragment();
         return fragment;
     }
 
-
-
-    public Request_fragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_request_fragment, container, false);
-         spinner_blood = (Spinner) view.findViewById(R.id.spinner);
+        View view = inflater.inflate(R.layout.fragment_request_fragment, container, false);
+        spinner_blood = (Spinner) view.findViewById(R.id.spinner);
         spinner_area = (Spinner) view.findViewById(R.id.spinner_area);
 
 
@@ -78,9 +75,6 @@ public class Request_fragment extends Fragment {
 
         return view;
     }
-
-
-
 
 
 }

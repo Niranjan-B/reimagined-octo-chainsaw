@@ -14,15 +14,14 @@ import com.example.kishore.bloodapp.R;
  */
 public class Donate_fragment extends Fragment {
 
-    public static Donate_fragment newInstance() {
-        Donate_fragment fragment = new Donate_fragment();
-        return fragment;
-    }
-
     public Donate_fragment() {
         // Required empty public constructor
     }
 
+    public static Donate_fragment newInstance() {
+        Donate_fragment fragment = new Donate_fragment();
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
