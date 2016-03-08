@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.rey.material.widget.Button;
@@ -25,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent= new Intent(MainActivity.this,SecondActivity.class);
+
                 Toast.makeText(MainActivity.this, maid_id.getText().toString(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
@@ -33,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent sign_up= new Intent(MainActivity.this, Sign_up.class);
+                startActivity(sign_up);
                 Toast.makeText(MainActivity.this, password.getText().toString(), Toast.LENGTH_LONG).show();
+
             }
         });
 

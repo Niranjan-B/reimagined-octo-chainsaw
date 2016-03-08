@@ -1,13 +1,91 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kishore.bloodapp.Fragments.Donate_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/linear_nam1">
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Your E-mail Address"
+                android:textSize="20sp"
+                android:id="@+id/edittext_email_req"
+                app:met_iconLeft="@drawable/ic_mail"
+                app:met_floatingLabel="highlight"
+                app:met_textColorHint="@color/colorPrimary"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="30dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linear1"
+            android:layout_below="@+id/linear_nam1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Select the Blood :"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_blood"
+                android:layout_marginLeft="25dp"></Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="30dp"
+            android:layout_below="@+id/linear1"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_lay"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="Select Your Area :"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_area"
+                android:layout_marginLeft="25dp"></Spinner>
+        </LinearLayout>
+
+
+        <com.rey.material.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Requesb to Donor"
+            style="@style/Material.Drawable.Ripple.Wave"
+            app:rd_rippleType="wave"
+            app:rd_delayClick="afterRelease"
+            app:rd_rippleColor="#bdc3c7"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/button_request"
+            app:rd_rippleAnimDuration="500"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
 
 </FrameLayout>
