@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, maid_id.getText().toString(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
@@ -33,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, password.getText().toString(), Toast.LENGTH_LONG).show();
+                Intent sign_up= new Intent(MainActivity.this, Sign_up.class);
+                startActivity(sign_up);
             }
         });
 

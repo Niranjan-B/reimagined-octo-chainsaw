@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_up">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edittext_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Your name"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_fullname"
+                    app:met_textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_name"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edittext_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Your Mail Id"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_mail"
+                    app:met_textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_mail"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edittext_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter your Password"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_password"
+                    app:met_textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_repassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_password"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edittext_re_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Re-Enter your Password"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_password"
+                    app:met_textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_repassword"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Your Blood Group :"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/blood_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:clickable="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_spinner"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+                <com.rey.material.widget.Button
+                    android:id="@+id/button_signup1"
+                    style="@style/Material.Drawable.Ripple.Wave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_signin"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="40dp"
+                    android:text="SIGN UP"
+                    android:textColor="#ffffff"
+                    app:rd_delayClick="afterRelease"
+                    app:rd_rippleAnimDuration="500"
+                    app:rd_rippleColor="#bdc3c7"
+                    app:rd_rippleType="wave" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

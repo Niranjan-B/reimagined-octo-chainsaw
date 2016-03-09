@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.kishore.bloodapp.Adapters.PagerAdapter;
@@ -24,15 +25,15 @@ public class SecondActivity extends AppCompatActivity implements MaterialTabList
         setContentView(R.layout.activity_second);
         pager = (ViewPager) findViewById(R.id.pager);
         mt = (MaterialTabHost) findViewById(R.id.materialTabHost);
+        pager = (ViewPager) findViewById(R.id.pager);
+        mt = (MaterialTabHost) findViewById(R.id.materialTabHost);
         Toolbar tb = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setSupportActionBar(tb);
         tb.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
-
             }
         });
 
@@ -71,6 +72,12 @@ public class SecondActivity extends AppCompatActivity implements MaterialTabList
     @Override
     public void onTabUnselected(MaterialTab tab) {
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return true;
     }
 }
 

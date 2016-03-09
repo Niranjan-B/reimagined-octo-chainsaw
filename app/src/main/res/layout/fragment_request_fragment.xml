@@ -15,9 +15,51 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/linear_nam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edittext_name_req"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Your name"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_fullname"
+                    app:met_textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_nam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_nam"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edittext_email_req"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Your E-mail Address"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@drawable/ic_mail"
+                    app:met_textColorHint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/linear1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_nam1"
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal"
                 android:padding="30dp">
@@ -32,7 +74,7 @@
 
                 <Spinner
                     android:id="@+id/spinner"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="25dp" />
             </LinearLayout>
@@ -41,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear1"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:padding="30dp">
 
@@ -55,9 +97,9 @@
 
                 <Spinner
                     android:id="@+id/spinner_area"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"></Spinner>
+                    android:layout_marginLeft="25dp" />
             </LinearLayout>
         </RelativeLayout>
 

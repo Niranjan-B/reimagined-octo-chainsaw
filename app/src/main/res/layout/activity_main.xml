@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     android:paddingBottom="5dp"
     android:paddingTop="5dp"
@@ -11,23 +11,20 @@
     tools:context="com.example.kishore.bloodapp.MainActivity">
 
     <RelativeLayout
+        android:id="@+id/coreRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/textviewlayout"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="200dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="BLOOD BANK"
-                android:textColor="@color/colorPrimary"
-                android:textSize="50sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:gravity="top|center"
+            android:text="BLOOD BANK"
+            android:textColor="@color/colorPrimary"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            android:id="@+id/textviewlayout"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -113,5 +110,8 @@
                 app:rd_rippleType="wave" />
 
         </RelativeLayout>
+
     </RelativeLayout>
+
+
 </ScrollView>
