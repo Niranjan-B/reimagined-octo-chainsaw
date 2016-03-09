@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Blood App"></android.support.v7.widget.Toolbar>
+        app:title="Blood App"/>
 
     <it.neokree.materialtabs.MaterialTabHost
         android:id="@+id/materialTabHost"
@@ -20,11 +20,8 @@
         android:layout_height="48dp"
         app:textColor="#FFFFFF"
         app:primaryColor="@color/colorPrimary"
-        app:accentColor="#bdc3c7" />
-        android:layout_below="@id/app_bar"
-        app:accentColor="#00ff00"
-        app:primaryColor="@color/colorPrimary"
-        app:textColor="#FFFFFF" />
+        app:accentColor="#bdc3c7"
+        android:layout_below="@id/app_bar" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

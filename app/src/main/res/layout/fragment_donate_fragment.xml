@@ -47,12 +47,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/spinner_blood"
-                android:layout_marginLeft="25dp"></Spinner>
+                android:layout_marginLeft="25dp"/>
         </LinearLayout>
         <LinearLayout
             android:padding="30dp"
             android:layout_below="@+id/linear1"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/linear_lay"
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/spinner_area"
-                android:layout_marginLeft="25dp"></Spinner>
+                android:layout_marginLeft="25dp"/>
         </LinearLayout>
 
 
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Requesb to Donor"
+            android:text="Request to Donate"
             style="@style/Material.Drawable.Ripple.Wave"
             app:rd_rippleType="wave"
             app:rd_delayClick="afterRelease"

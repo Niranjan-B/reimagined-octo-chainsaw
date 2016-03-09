@@ -16,11 +16,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity" />
-        <activity android:name=".Sign_up"
-            android:theme="@style/AppTheme"></activity>
             android:name=".SecondActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/TempTheme"/>
+        <activity
+            android:name=".Sign_up"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
