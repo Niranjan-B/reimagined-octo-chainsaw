@@ -33,8 +33,8 @@ import retrofit2.Retrofit;
 
 public class Sign_up extends AppCompatActivity {
     MaterialEditText editText_name, editText_mail, editText_password, editText_repassword;
-    Spinner blood_group;
-    String blood_group_text;
+    Spinner blood_group, spinner_area;
+    String blood_group_text, bloodDonorArea;
     Button sign_up1;
     Map<String, String> userInputs;
     ProgressDialog progressDialog;
@@ -53,6 +53,7 @@ public class Sign_up extends AppCompatActivity {
         editText_password = (MaterialEditText) findViewById(R.id.edittext_password);
         editText_repassword = (MaterialEditText) findViewById(R.id.edittext_re_password);
         blood_group = (Spinner) findViewById(R.id.blood_spinner);
+        spinner_area = (Spinner) findViewById(R.id.spinner_area);
         sign_up1 = (Button) findViewById(R.id.button_signup1);
 
         blood_group_text = null;
@@ -73,6 +74,25 @@ public class Sign_up extends AppCompatActivity {
 
             }
         });
+
+        ArrayAdapter<CharSequence> adapter_area = ArrayAdapter.createFromResource(Sign_up.this, R.array.Area, android.R.layout.simple_spinner_item);
+        adapter_area.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_area.setAdapter(adapter_area);
+        spinner_area.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                bloodDonorArea = (String) parent.getItemAtPosition(position);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
         sign_up1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,14 +118,12 @@ public class Sign_up extends AppCompatActivity {
                 userInputs.put("mail_id", mail);
                 userInputs.put("password", password);
                 userInputs.put("blood_group", blood_group_text);
-                userInputs.put("locality", "hebbal");
+                userInputs.put("locality", bloodDonorArea);
                 return true;
             }
         }
         return false;
     }
-
-    // TODO :  add place spinner
 
     private void sendSignUpRequest() {
         RetrofitEndPoints signUpApiService = RetrofitService.getRetrofitAdapter().create(RetrofitEndPoints.class);
