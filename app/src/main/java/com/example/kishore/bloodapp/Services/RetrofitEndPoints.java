@@ -18,4 +18,7 @@ public interface RetrofitEndPoints {
     @GET("insert_data.php")
     Call<SignUpResponse> signUp(@QueryMap Map<String, String> userCredentials);
 
+    @GET("login.php")
+    Call<SignUpResponse> login(@QueryMap Map<String, String> loginCredentials);
+
 }
