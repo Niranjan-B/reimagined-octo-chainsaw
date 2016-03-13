@@ -110,11 +110,12 @@
         android:layout_marginTop="70dp"
         android:visibility="gone" />
 
-    <Button
+    <com.rey.material.widget.Button
         android:id="@+id/backToRequestButton"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_gravity="top"
+        style="@style/Material.Drawable.Ripple.Wave"
         android:background="@color/colorPrimary"
         android:drawableLeft="@android:drawable/ic_menu_revert"
         android:paddingLeft="10dp"
@@ -122,6 +123,10 @@
         android:text="Back To Request Page"
         android:textColor="@android:color/white"
         android:visibility="gone"
+        app:rd_delayClick="afterRelease"
+        app:rd_rippleAnimDuration="500"
+        app:rd_rippleColor="#bdc3c7"
+        app:rd_rippleType="wave"
         android:layout_margin="10dp"/>
 
 </FrameLayout>
