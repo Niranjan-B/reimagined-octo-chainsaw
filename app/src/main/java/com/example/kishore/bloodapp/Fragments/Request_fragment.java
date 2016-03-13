@@ -18,8 +18,6 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class Request_fragment extends Fragment {
     Spinner spinner_blood;
     Spinner spinner_area;
-    MaterialEditText mail_id, name;
-
 
     public Request_fragment() {
         // Required empty public constructor
@@ -37,9 +35,6 @@ public class Request_fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_request_fragment, container, false);
         spinner_blood = (Spinner) view.findViewById(R.id.spinner);
         spinner_area = (Spinner) view.findViewById(R.id.spinner_area);
-        name= (MaterialEditText) view.findViewById(R.id.edittext_name_req);
-        mail_id= (MaterialEditText) view.findViewById(R.id.edittext_email_req);
-
 
         ArrayAdapter<CharSequence> adapter_blood = ArrayAdapter.createFromResource(getActivity(), R.array.blood_groups, android.R.layout.simple_spinner_item);
         adapter_blood.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -48,14 +43,11 @@ public class Request_fragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                String temp=(String) parent.getItemAtPosition(position);
-                Log.d("temp", temp);
-
+                String temp = (String) parent.getItemAtPosition(position);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
             }
         });
 
@@ -66,19 +58,13 @@ public class Request_fragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-String temp=(String) parent.getItemAtPosition(position);
-                Log.d("temp", temp);
-
-
+                String temp=(String) parent.getItemAtPosition(position);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
             }
         });
-
-
         return view;
     }
 

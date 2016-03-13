@@ -12,7 +12,7 @@ import com.example.kishore.bloodapp.Fragments.Request_fragment;
  */
 public class PagerAdapter extends FragmentPagerAdapter {
     public static final int pages = 2;
-    public static String[] str = new String[]{"Request For Blood", "Dontae Blood"};
+    public static String[] str = new String[]{"Request For Blood", "Donate Blood"};
 
     public PagerAdapter(FragmentManager fm) {
         super(fm);

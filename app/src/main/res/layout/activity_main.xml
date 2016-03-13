@@ -39,6 +39,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:hint="Enter Mail id"
+                android:inputType="textEmailAddress"
                 android:textSize="20sp"
                 app:met_floatingLabel="highlight"
                 app:met_iconLeft="@drawable/ic_mail"
