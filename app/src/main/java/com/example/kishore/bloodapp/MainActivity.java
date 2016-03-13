@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         sign_in = (Button) findViewById(R.id.button_login);
         sign_up = (Button) findViewById(R.id.button_signup);
         progressDialog = new ProgressDialog(MainActivity.this);
-        
+
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
