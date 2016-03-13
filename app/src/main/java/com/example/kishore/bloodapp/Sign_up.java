@@ -160,7 +160,6 @@ public class Sign_up extends AppCompatActivity {
     }
 
     private void startProgressBar() {
-        progressDialog.setTitle("Processing...");
         progressDialog.setMessage("Signing you up....");
         progressDialog.show();
     }

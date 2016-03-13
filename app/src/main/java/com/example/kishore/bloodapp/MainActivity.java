@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showProgressDialog() {
-        progressDialog.setTitle("Loading");
         progressDialog.setMessage("Logging you in...");
         progressDialog.show();
     }
