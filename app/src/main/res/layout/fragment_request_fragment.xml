@@ -15,18 +15,19 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/textContainerLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textContainerLinearLayout">
+                tools:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select both the options below to get most accurate results."
                     android:layout_marginTop="20dp"
                     android:padding="10dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorPrimary"/>
+                    android:text="Select both the options below to get most accurate results."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -37,7 +38,8 @@
                 android:layout_below="@+id/textContainerLinearLayout"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:padding="30dp">
+                android:padding="30dp"
+                tools:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -55,12 +57,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linear2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear1"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:padding="30dp">
+                android:padding="30dp"
+                tools:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -79,6 +83,7 @@
         </RelativeLayout>
 
         <com.rey.material.widget.Button
+            android:id="@+id/searchDonorsButton"
             style="@style/Material.Drawable.Ripple.Wave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +96,32 @@
             app:rd_delayClick="afterRelease"
             app:rd_rippleAnimDuration="500"
             app:rd_rippleColor="#bdc3c7"
-            app:rd_rippleType="wave" />
+            app:rd_rippleType="wave"
+            tools:visibility="gone" />
     </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/donorsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/backToRequestButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="top"
+        android:background="@color/colorPrimary"
+        android:drawableLeft="@android:drawable/ic_menu_revert"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="Back To Request Page"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:layout_margin="10dp"/>
 
 </FrameLayout>
