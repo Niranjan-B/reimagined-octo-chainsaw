@@ -1,5 +1,6 @@
 package com.example.kishore.bloodapp.Services;
 
+import com.example.kishore.bloodapp.Models.DonorsList;
 import com.example.kishore.bloodapp.Models.SignUpResponse;
 
 import java.util.Map;
@@ -18,7 +19,11 @@ public interface RetrofitEndPoints {
     @GET("insert_data.php")
     Call<SignUpResponse> signUp(@QueryMap Map<String, String> userCredentials);
 
+    // logging in end-point
     @GET("login.php")
     Call<SignUpResponse> login(@QueryMap Map<String, String> loginCredentials);
 
+    //fetching donors end point
+    @GET("get_donors.php")
+    Call<DonorsList> fetchDonors(@QueryMap Map<String, String> fetchingCriteria);
 }
