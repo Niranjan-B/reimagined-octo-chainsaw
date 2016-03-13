@@ -50,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Your Mail Id"
+                    android:inputType="textEmailAddress"
                     android:textSize="20sp"
                     app:met_floatingLabel="highlight"
                     app:met_iconLeft="@drawable/ic_mail"
@@ -103,8 +104,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_repassword"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -126,6 +127,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_spinner"
+                android:layout_marginTop="20dp"
+                android:id="@+id/linear_spinner_area"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Your Area :"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/spinner_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_spinner_area"
                 android:orientation="vertical"
                 android:layout_marginTop="30dp">
 

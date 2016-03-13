@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,6 +9,10 @@
     android:paddingTop="5dp"
     android:scrollbars="none"
     tools:context="com.example.kishore.bloodapp.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/coreRelativeLayout"
@@ -39,6 +43,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:hint="Enter Mail id"
+                android:inputType="textEmailAddress"
                 android:textSize="20sp"
                 app:met_floatingLabel="highlight"
                 app:met_iconLeft="@drawable/ic_mail"
@@ -53,6 +58,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:hint="Enter Password"
+                app:met_floatingLabel="highlight"
                 android:inputType="textPassword"
                 android:textSize="20sp"
                 app:met_iconLeft="@drawable/ic_password"
@@ -113,5 +119,5 @@
 
     </RelativeLayout>
 
-
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
