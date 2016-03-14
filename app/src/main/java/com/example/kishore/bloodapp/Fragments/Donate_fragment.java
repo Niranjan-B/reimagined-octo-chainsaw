@@ -102,6 +102,8 @@ public class Donate_fragment extends DialogFragment {
             public void onClick(View v) {
                 if (validateUser()) {
                     fireDonateBloodService();
+                } else {
+                    showToast("E-mail can't be left empty!");
                 }
             }
         });
@@ -116,7 +118,7 @@ public class Donate_fragment extends DialogFragment {
         Map<String, String> tempMap = new HashMap<>();
         tempMap.put("mail_id", mail_id.getText().toString());
         tempMap.put("locality", area);
-        tempMap.put("schedule", bloodGroupType);
+        tempMap.put("blood_type", bloodGroupType);
 
         RetrofitEndPoints retrofitEndPoints = RetrofitService.getRetrofitAdapter().create(RetrofitEndPoints.class);
         Call<SignUpResponse> apiCall = retrofitEndPoints.requestToDonate(tempMap);
@@ -138,7 +140,10 @@ public class Donate_fragment extends DialogFragment {
     }
 
     private Boolean validateUser() {
-        return (mail_id.getText().toString().trim().contains(""));
+        if(mail_id.getText().toString().isEmpty()) {
+            return false;
+        }
+        return true;
     }
 
     private void showProgressDialog() {

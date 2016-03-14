@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Your E-mail Address"
+                android:inputType="textEmailAddress"
                 android:textSize="20sp"
                 app:met_floatingLabel="highlight"
                 app:met_iconLeft="@drawable/ic_mail"
