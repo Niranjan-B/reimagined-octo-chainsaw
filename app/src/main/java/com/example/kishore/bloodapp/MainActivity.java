@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<SignUpResponse> call, Throwable t) {
+                showToast("Oops! something went wrong.");
                 stopProgressDialog();
             }
         });
