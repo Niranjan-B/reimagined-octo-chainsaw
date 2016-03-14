@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kishore.bloodapp.Fragments.Donate_fragment">
@@ -10,82 +10,88 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/linear_nam1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:id="@+id/linear_nam1">
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
             <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edittext_email_req"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Your E-mail Address"
                 android:textSize="20sp"
-                android:id="@+id/edittext_email_req"
-                app:met_iconLeft="@drawable/ic_mail"
                 app:met_floatingLabel="highlight"
-                app:met_textColorHint="@color/colorPrimary"
-                />
+                app:met_iconLeft="@drawable/ic_mail"
+                app:met_textColorHint="@color/colorPrimary" />
         </LinearLayout>
+
         <LinearLayout
-            android:padding="30dp"
-            android:layout_marginTop="20dp"
             android:id="@+id/linear1"
-            android:layout_below="@+id/linear_nam1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_below="@+id/linear_nam1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:padding="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Select the Blood :"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:text="Select the Blood :"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
                 android:id="@+id/spinner_blood"
-                android:layout_marginLeft="25dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp" />
         </LinearLayout>
+
         <LinearLayout
-            android:padding="30dp"
+            android:id="@+id/linear_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/linear1"
             android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linear_lay"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:text="Select Your Area :"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:text="Select Your Area :"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
                 android:id="@+id/spinner_area"
-                android:layout_marginLeft="25dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp" />
         </LinearLayout>
 
 
         <com.rey.material.widget.Button
+            android:id="@+id/button_request"
+            style="@style/Material.Drawable.Ripple.Wave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="@color/colorPrimary"
-            android:text="Request to Donate"
-            style="@style/Material.Drawable.Ripple.Wave"
-            app:rd_rippleType="wave"
-            app:rd_delayClick="afterRelease"
-            app:rd_rippleColor="#bdc3c7"
-            android:paddingRight="20dp"
             android:paddingLeft="20dp"
-            android:id="@+id/button_request"
+            android:paddingRight="20dp"
+            android:text="Request to Donate"
+            app:rd_delayClick="afterRelease"
             app:rd_rippleAnimDuration="500"
-            android:layout_alignParentBottom="true"/>
+            app:rd_rippleColor="#bdc3c7"
+            app:rd_rippleType="wave" />
     </RelativeLayout>
 
 </FrameLayout>
