@@ -26,4 +26,8 @@ public interface RetrofitEndPoints {
     //fetching donors end point
     @GET("get_donors.php")
     Call<DonorsList> fetchDonors(@QueryMap Map<String, String> fetchingCriteria);
+
+    //request to donate end point
+    @GET("donate.php")
+    Call<SignUpResponse> requestToDonate(@QueryMap Map<String, String> donateCredentials);
 }
