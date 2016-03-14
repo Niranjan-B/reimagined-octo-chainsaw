@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kishore.bloodapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +21,11 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:theme="@style/TempTheme"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/TempTheme" />
         <activity
             android:name=".Sign_up"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
     </application>
 
