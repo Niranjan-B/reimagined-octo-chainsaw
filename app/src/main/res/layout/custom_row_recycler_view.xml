@@ -44,7 +44,7 @@
             android:layout_alignLeft="@+id/nameOfDonorPlaceHolder"
             android:layout_alignStart="@+id/nameOfDonorPlaceHolder"
             android:layout_below="@+id/nameOfDonor"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:text="E - mail :"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -67,23 +67,23 @@
             android:layout_alignLeft="@+id/emailIdPlaceHolder"
             android:layout_alignStart="@+id/emailIdPlaceHolder"
             android:layout_below="@+id/emailIdPlaceHolder"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:text="Phone Num :"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/phoneNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/phoneNumPlaceHolder"
-            android:layout_toEndOf="@id/phoneNumPlaceHolder"
-            android:layout_toRightOf="@id/phoneNumPlaceHolder"
-            android:textSize="20sp"
+            android:layout_below="@id/emailId"
             android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:text="9880689390" />
+            android:layout_toEndOf="@+id/phoneNumPlaceHolder"
+            android:layout_toRightOf="@+id/phoneNumPlaceHolder"
+            android:textSize="20sp"
+            tools:text="9880689390" />
 
 
     </RelativeLayout>
