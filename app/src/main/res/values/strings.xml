@@ -14,11 +14,8 @@
     <string-array name="Area">
         <item>hebbal</item>
         <item>yelahanka</item>
-        <item>marathahalli</item>
         <item>mekri circle</item>
         <item>nagshettyhalli</item>
         <item>new bel road</item>
-        <item>sanjaynagar</item>
-        <item>mathikere</item>
     </string-array>
 </resources>

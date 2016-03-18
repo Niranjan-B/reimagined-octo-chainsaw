@@ -40,6 +40,7 @@ public class RecyclerViewDonorListAdapter extends RecyclerView.Adapter<RecyclerV
     public void onBindViewHolder(CustomViewHolder holder, int position) {
         holder.name.setText(listOfDonors.get(position).getName());
         holder.emailId.setText(listOfDonors.get(position).getMailId());
+        holder.phoneNum.setText(listOfDonors.get(position).getPhone());
     }
 
     @Override
@@ -48,12 +49,13 @@ public class RecyclerViewDonorListAdapter extends RecyclerView.Adapter<RecyclerV
     }
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
-        TextView name, emailId;
+        TextView name, emailId, phoneNum;
 
         public CustomViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.nameOfDonor);
             emailId = (TextView) itemView.findViewById(R.id.emailId);
+            phoneNum = (TextView) itemView.findViewById(R.id.phoneNum);
         }
     }
 

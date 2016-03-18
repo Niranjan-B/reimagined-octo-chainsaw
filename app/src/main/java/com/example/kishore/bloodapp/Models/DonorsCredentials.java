@@ -5,7 +5,7 @@ package com.example.kishore.bloodapp.Models;
  */
 public class DonorsCredentials {
 
-    private String name, mailId, address;
+    private String name, mailId, address, phone;
 
     public String getMailId() {
         return mailId;
@@ -21,6 +21,14 @@ public class DonorsCredentials {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getAddress() {

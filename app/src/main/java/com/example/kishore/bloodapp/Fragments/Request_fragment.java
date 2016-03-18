@@ -2,6 +2,8 @@ package com.example.kishore.bloodapp.Fragments;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -126,7 +128,10 @@ public class Request_fragment extends Fragment {
         donorsList.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Log.d("recycler", "hell0 = " + donorsCredentialsArrayList.get(position).getAddress());
+                String geoUri = "http://maps.google.co.in/maps?q=" + donorsCredentialsArrayList.get(position).getAddress();
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(geoUri));
+                startActivity(intent);
             }
         }));
 
