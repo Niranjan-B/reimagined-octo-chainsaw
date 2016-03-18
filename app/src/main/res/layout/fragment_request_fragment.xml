@@ -108,7 +108,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="70dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:scrollbars="none"/>
 
     <com.rey.material.widget.Button
         android:id="@+id/backToRequestButton"
