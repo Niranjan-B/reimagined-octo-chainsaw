@@ -1,14 +1,10 @@
 package com.example.kishore.bloodapp;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -20,20 +16,16 @@ import com.example.kishore.bloodapp.Services.RetrofitEndPoints;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.rey.material.widget.Button;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 
 public class Sign_up extends AppCompatActivity {
-    MaterialEditText editText_name, editText_mail, editText_password, editText_repassword;
+    MaterialEditText editText_name, editText_mail, editText_password, editText_repassword, phoneNumEditText;
     Spinner blood_group, spinner_area;
     String blood_group_text, bloodDonorArea;
     Button sign_up1;
@@ -53,6 +45,7 @@ public class Sign_up extends AppCompatActivity {
         editText_mail = (MaterialEditText) findViewById(R.id.edittext_mail);
         editText_password = (MaterialEditText) findViewById(R.id.edittext_password);
         editText_repassword = (MaterialEditText) findViewById(R.id.edittext_re_password);
+        phoneNumEditText = (MaterialEditText) findViewById(R.id.phone_num);
         blood_group = (Spinner) findViewById(R.id.blood_spinner);
         spinner_area = (Spinner) findViewById(R.id.spinner_area);
         sign_up1 = (Button) findViewById(R.id.button_signup1);
@@ -118,6 +111,7 @@ public class Sign_up extends AppCompatActivity {
         String password = editText_password.getText().toString();
         String repassword = editText_repassword.getText().toString();
         String name = editText_name.getText().toString();
+        String phoneNum = phoneNumEditText.getText().toString();
 
         if(!(mail.trim().equals("") && password.trim().equals("") && repassword.trim().equals("") && name.trim().equals(""))) {
             if(password.contentEquals(repassword)) {
@@ -126,6 +120,7 @@ public class Sign_up extends AppCompatActivity {
                 userInputs.put("password", password);
                 userInputs.put("blood_group", blood_group_text);
                 userInputs.put("locality", bloodDonorArea);
+                userInputs.put("phone_num", phoneNum);
                 return true;
             }
         }

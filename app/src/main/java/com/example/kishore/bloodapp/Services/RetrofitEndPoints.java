@@ -12,6 +12,7 @@ import retrofit2.http.QueryMap;
 
 /**
  * Created by NIRANJAN on 11-03-2016.
+ * a ninja - prod :D
  */
 public interface RetrofitEndPoints {
 
