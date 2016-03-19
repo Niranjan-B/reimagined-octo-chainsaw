@@ -100,13 +100,34 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_repassword"
+                android:id="@+id/phone_num_container"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/phone_num"
+                    android:hint="Enter Your Phone Number"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    app:met_floatingLabel="highlight"
+                    app:met_iconLeft="@android:drawable/stat_sys_phone_call"
+                    app:met_textColorHint="@color/colorPrimary"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/linear_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_repassword"
-                android:padding="10dp"
+                android:layout_below="@+id/phone_num_container"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -121,22 +142,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
-                    android:clickable="true"/>
+                    android:clickable="true" />
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/linear_spinner_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_spinner"
                 android:layout_marginTop="20dp"
-                android:id="@+id/linear_spinner_area"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select Your Area :"
                     android:layout_marginLeft="10dp"
+                    android:text="Select Your Area :"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
                     android:textStyle="normal" />
@@ -149,13 +171,12 @@
             </LinearLayout>
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear_spinner_area"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
 
                 <com.rey.material.widget.Button
                     android:id="@+id/button_signup1"
